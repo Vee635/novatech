@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="NovaTech — Modern development platform landing page (demo)" />
+  <title>NovaTech — Modern Development</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">NovaTech</a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#signup">Get Started</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Build better software, faster</h1>
+        <p class="lead">A modern platform for teams to collaborate and ship great products — inspired by a clean, minimal design language.</p>
+        <p class="hero-ctas">
+          <a class="btn-primary" href="#signup">Start free trial</a>
+          <a class="btn-ghost" href="#features">Explore features</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="features container" aria-labelledby="features-title">
+      <h2 id="features-title" class="sr-only">Features</h2>
+      <article class="feature">
+        <h3>Source control</h3>
+        <p>Fast, reliable repositories with branches and pull requests to organize work.</p>
+      </article>
+      <article class="feature">
+        <h3>CI / CD</h3>
+        <p>Automate tests and deployments using configurable pipelines and checks.</p>
+      </article>
+      <article class="feature">
+        <h3>Team tools</h3>
+        <p>Issues, discussions, and project boards to keep teams aligned and productive.</p>
+      </article>
+    </section>
+
+    <section id="signup" class="signup container" aria-labelledby="signup-title">
+      <h2 id="signup-title">Get started with NovaTech</h2>
+      <form id="signup-form" class="form" action="/api/signup" method="post" aria-describedby="signup-msg">
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+        <button type="submit" class="btn-primary">Start free</button>
+      </form>
+      <p id="signup-msg" class="muted" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div>© <span id="year"></span> NovaTech</div>
+      <nav class="foot-links" aria-label="Footer links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

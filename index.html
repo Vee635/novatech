@@ -3,71 +3,268 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="NovaTech — Modern development platform landing page (demo)" />
-  <title>NovaTech — Modern Development</title>
+  <meta name="description" content="NovaTech — modern IT support and managed services landing page" />
+  <title>Home | NovaTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">NovaTech</a>
-      <nav class="nav" id="nav" aria-label="Main navigation">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <div class="brand-group">
+        <div class="brand-mark">N</div>
+        <div>
+          <strong>NovaTech</strong>
+          <small>IT Network Solutions</small>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#dashboard">Dashboard</a>
         <a href="#contact">Contact</a>
-        <a class="btn" href="#signup">Get Started</a>
       </nav>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <a class="nav-cta" href="#contact">Book a Consultation</a>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <h1 id="hero-title">Build better software, faster</h1>
-        <p class="lead">A modern platform for teams to collaborate and ship great products — inspired by a clean, minimal design language.</p>
-        <p class="hero-ctas">
-          <a class="btn-primary" href="#signup">Start free trial</a>
-          <a class="btn-ghost" href="#features">Explore features</a>
-        </p>
+    <section id="v-home" class="view">
+      <div class="hero-shell">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Reliable technology support</span>
+            <h1>Technology that keeps your business moving.</h1>
+            <p>
+              We help organisations simplify operations, protect their critical systems,
+              and deliver faster service with tailored support, intelligent monitoring and
+              modern infrastructure planning.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Request a Quote</a>
+              <a class="btn btn-secondary" href="#services">Explore Services</a>
+            </div>
+            <ul class="mini-stats">
+              <li><strong>24/7</strong><span>Monitoring</span></li>
+              <li><strong>98.7%</strong><span>SLA Success</span></li>
+              <li><strong>1,200+</strong><span>Tickets Resolved</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card">
+            <div class="service-badge">Live Support</div>
+            <h3>Operational health snapshot</h3>
+            <div class="status-row">
+              <span>Network uptime</span>
+              <strong>99.98%</strong>
+            </div>
+            <div class="status-row">
+              <span>Endpoint security</span>
+              <strong>Protected</strong>
+            </div>
+            <div class="status-row">
+              <span>Critical alerts</span>
+              <strong>2 Active</strong>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-bar"><span style="width: 88%"></span></div>
+            </div>
+            <small>Client satisfaction trend this quarter</small>
+          </div>
+        </div>
+      </div>
+
+      <section class="container trust-strip">
+        <div>Trusted by schools, clinics, offices and growing businesses</div>
+        <div class="trust-badges">
+          <span>Network</span>
+          <span>Cyber</span>
+          <span>Cloud</span>
+          <span>Support</span>
+        </div>
+      </section>
+
+      <section class="container home-cards">
+        <article class="info-card">
+          <h3>Managed IT Support</h3>
+          <p>Responsive help desk support, preventative maintenance and end-user productivity services.</p>
+        </article>
+        <article class="info-card dark">
+          <h3>Infrastructure Modernisation</h3>
+          <p>Upgrade legacy systems, improve reliability, reduce risk and future-proof your operations.</p>
+        </article>
+        <article class="info-card">
+          <h3>Security & Compliance</h3>
+          <p>Protect confidential data with monitoring, access control and business continuity planning.</p>
+        </article>
+      </section>
+    </section>
+
+    <section id="v-about" class="view" hidden>
+      <div class="container page-header">
+        <span class="eyebrow">About us</span>
+        <h2>People-first IT, built around your business.</h2>
+      </div>
+      <div class="container about-grid">
+        <div>
+          <p>NovaTech partners with businesses to simplify technology decisions and build dependable digital environments. We bring clarity to complexity, helping leaders reduce outages, improve workflows and confidently plan for the future.</p>
+          <p>Our consultative approach blends technical expertise with practical business understanding, so every system we implement supports real goals.</p>
+        </div>
+        <div class="quote-box">
+          <strong>“Technology should remove friction, not create it.”</strong>
+          <span>— NovaTech leadership</span>
+        </div>
       </div>
     </section>
 
-    <section id="features" class="features container" aria-labelledby="features-title">
-      <h2 id="features-title" class="sr-only">Features</h2>
-      <article class="feature">
-        <h3>Source control</h3>
-        <p>Fast, reliable repositories with branches and pull requests to organize work.</p>
-      </article>
-      <article class="feature">
-        <h3>CI / CD</h3>
-        <p>Automate tests and deployments using configurable pipelines and checks.</p>
-      </article>
-      <article class="feature">
-        <h3>Team tools</h3>
-        <p>Issues, discussions, and project boards to keep teams aligned and productive.</p>
-      </article>
+    <section id="v-services" class="view" hidden>
+      <div class="container page-header">
+        <span class="eyebrow">Our services</span>
+        <h2>Solutions designed for growth and resilience.</h2>
+      </div>
+      <div class="container service-list">
+        <article class="service-item">
+          <h3>IT Help Desk</h3>
+          <p>Fast-response support to keep end users productive and reduce disruption across departments.</p>
+        </article>
+        <article class="service-item">
+          <h3>Network & Wi‑Fi</h3>
+          <p>Design, optimisation and support for robust connectivity and resilient office infrastructure.</p>
+        </article>
+        <article class="service-item">
+          <h3>Cybersecurity</h3>
+          <p>Threat monitoring, endpoint protection and access controls to defend your organisation.</p>
+        </article>
+        <article class="service-item">
+          <h3>Cloud & Backup</h3>
+          <p>Secure cloud hosting, backup planning and disaster recovery strategies for peace of mind.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="signup" class="signup container" aria-labelledby="signup-title">
-      <h2 id="signup-title">Get started with NovaTech</h2>
-      <form id="signup-form" class="form" action="/api/signup" method="post" aria-describedby="signup-msg">
-        <label for="email" class="sr-only">Email address</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required />
-        <button type="submit" class="btn-primary">Start free</button>
-      </form>
-      <p id="signup-msg" class="muted" aria-live="polite"></p>
+    <section id="v-team" class="view" hidden>
+      <div class="container page-header">
+        <span class="eyebrow">Our team</span>
+        <h2>Skilled specialists with a practical approach.</h2>
+      </div>
+      <div class="container team-grid">
+        <article class="team-card">
+          <div class="avatar">AM</div>
+          <h3>Alicia M.</h3>
+          <p>Operations Director</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar">JT</div>
+          <h3>Jason T.</h3>
+          <p>Infrastructure Engineer</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar">SK</div>
+          <h3>Sasha K.</h3>
+          <p>Security Consultant</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="v-dashboard" class="view" hidden>
+      <div class="container page-header">
+        <span class="eyebrow">Dashboard</span>
+        <h2>Operational insights.</h2>
+      </div>
+      <div class="container dashboard-wrap">
+        <div class="chart-card">
+          <h3>Case resolution trend</h3>
+          <canvas id="caseResolution"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Hardware status</h3>
+          <canvas id="hardwareStatus"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Change requests</h3>
+          <canvas id="changeRequests"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Ticket categories</h3>
+          <canvas id="ticketsCategory"></canvas>
+        </div>
+        <p id="chartnote" class="chart-note"></p>
+      </div>
+    </section>
+
+    <section id="v-contact" class="view" hidden>
+      <div class="container page-header">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s talk about your next IT project.</h2>
+      </div>
+
+      <div class="container contact-wrap">
+        <div class="contact-panel">
+          <h3>Send an enquiry</h3>
+          <form id="enq">
+            <label>
+              Name
+              <input id="name" type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              Subject
+              <input id="subject" type="text" placeholder="How can we help?" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Submit Enquiry</button>
+          </form>
+          <p id="done" class="feedback" hidden></p>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Log a ticket</h3>
+          <form id="tk">
+            <label>
+              Ticket owner
+              <input id="tn" type="text" placeholder="Name or team" required />
+            </label>
+            <label>
+              Issue / Request
+              <input id="tc" type="text" placeholder="Describe the problem" required />
+            </label>
+            <div id="levels"></div>
+            <button class="btn btn-primary" type="submit">Log Ticket</button>
+          </form>
+          <p id="tdone" class="feedback" hidden></p>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Check ticket status</h3>
+          <form id="look">
+            <label>
+              Reference number
+              <input id="ref" type="text" placeholder="ZT-xxxx" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Lookup</button>
+          </form>
+          <p id="res" class="feedback"></p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div>© <span id="year"></span> NovaTech</div>
-      <nav class="foot-links" aria-label="Footer links">
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>NovaTech</strong>
+        <p>Reliable technology support for growing businesses.</p>
+      </div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-      </nav>
+      </div>
     </div>
   </footer>
 
